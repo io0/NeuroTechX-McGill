@@ -20,6 +20,10 @@ class Classifier():
                  flash=0.2,
                  inter_flash=0.1,
                  inter_mega_trial=3):
+        self.column_order = [5, 3, 2, 0, 4, 1, 3, 2, 0, 1, 5, 4, 3, 4, 0, 5, 2, 1]
+        self.row_order = [1, 4, 2, 5, 0, 3, 3, 2, 5, 0, 1, 4, 4, 0, 2, 3, 1, 5]
+        self.num_rows = num_rows
+        self.num_columns = num_columns
         self.lda = LDA()
         self.fs = 250
         self.started = False
@@ -76,14 +80,17 @@ class Classifier():
         filtered_data = self.filter_(all_data)
         REALdata = filtered_data[buffer_length:]    # cut out filtering artifacts/buffer
         print(REALdata.shape)
-        self.epoch_data(REALdata)        
+        data = self.epoch_data(REALdata)
+        rows = self.extract(data[::2], row=True)
+        columns = self.extract(data[1::2], row=False)
+        print(rows.shape)
 
     def filter_(self,arr):
        nyq = 0.5 * self.fs
        order = 1
        b, a = signal.butter(order, [self.lowcut/nyq, self.highcut/nyq], btype='band')
        for i in range(0, 5):
-           arr = signal.lfilter(b, a, arr)
+           arr = signal.lfilter(b, a, arr, axis=0)
        return arr
        
     def epoch_data(self, arr):
@@ -102,7 +109,18 @@ class Classifier():
             new_arr.append(window)
         n = np.array(new_arr)
         print(n.shape)
-   
+        return n
+    def extract(self, arr, row=True):
+        if row:
+            order = self.row_order
+            num_ = self.num_rows
+        else: 
+            order = self.column_order
+            num_ = self.num_columns
+        new_arr = [[] for i in range (0, num_)]
+        for i, elem in enumerate(order):
+            new_arr[elem].append([arr[i]])
+        return np.mean(np.squeeze(np.array(new_arr)), axis=1)
 
 
 
