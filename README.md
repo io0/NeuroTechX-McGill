@@ -1,0 +1,1 @@
+![Response plot](avg_response.png)
