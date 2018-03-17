@@ -29,11 +29,9 @@ P300 refers to an ERP with a positive amplitude and a latency of 300-400ms follo
 Image source: http://faculty.washington.edu/losterho/erp_tutorial.htm
 
 ### How is P300 measured?
-**EEG**: An electroencephalogram (EEG) measures the summed electrical activity of the cerebral cortex at any given time. Measurable components of EEG signals include amplitude, frequency, cordance, power, and synchronicity. On a very broad, high-level, oscillations at different frequencies are associated with specific mental states (see figure below): beta waves (> 14 Hz), alpha waves (7.5 - 13 Hz), theta waves (3.5 - 7.5 Hz), and delta waves (<= 3 Hz).  EEG, is able to detect the strongest P300 ERP signals with Pz electrode Pz the parietal lobe (Kubler et al., 2001). The temporal resolution is extremely high, with millisecond accuracy. The trade off, however, is that EEG has very low spatial resolution compared to other neuroimaging methods, and can only measure signals from the cerebral cortex. However, EEG has a wide range of applications, both in clinical and basic science (Gui et al., 2010). 
+**EEG**: An electroencephalogram (EEG) measures the summed electrical activity of the cerebral cortex at any given time. Measurable components of EEG signals include amplitude, frequency, cordance, power, and synchronicity. On a very broad, high-level, oscillations at different frequencies (beta waves (> 14 Hz), alpha waves (7.5 - 13 Hz), theta waves (3.5 - 7.5 Hz), and delta waves (<= 3 Hz)) are associated with specific mental states. EEG, is able to detect the strongest P300 ERP signals with Pz electrode Pz the parietal lobe (Kubler et al., 2001). The temporal resolution is extremely high, with millisecond accuracy. The trade off, however, is that EEG has very low spatial resolution compared to other neuroimaging methods, and can only measure signals from the cerebral cortex. However, EEG has a wide range of applications, both in clinical and basic science (Gui et al., 2010). 
 
 
-
-Image source: Ned Herrmann, The Creative Brain
 
 ### Oddball paradigm
 Within an experimental setting, the P300 ERP is commonly elicited using an oddball paradigm in which a participant is presented with a series of target stimuli with rare occurrences of a different stimulus. The neural response to this unexpected stimulus corresponds with a larger amplitude P300 ERP (Kubler et al., 2001).
