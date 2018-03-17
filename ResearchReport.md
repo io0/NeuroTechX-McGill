@@ -41,11 +41,9 @@ Within an experimental setting, the P300 ERP is commonly elicited using an oddba
 An eample of an oddball paradigm in the visual domain: Visual stimuli are presented in a temporal sequence. The green colored circle stimulus is frequently presented and is referred to as the “frequent” or “standard” stimulus. The pink colored circle is rarely presented and is referred to as the “rare” or “deviant” or “target” stimulus. The number of standards presented between two deviants is pseudo-random. Within the context of BCI speller matrices, only the user-intended row and column will induce a P300 ERP (Machado et al., 2010).
 
 
-	
+![alt text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4061616/bin/fnhum-08-00437-g004.jpg "Visual odball paradigm example")
 
-
-
-                                                     Image source: Daltrozzo, J., & Conway, C. M. (2014)
+Image source: Daltrozzo, J., & Conway, C. M. (2014)
 
 ### Assistive Communication Devices
 Polacek et al. highlight three main ways for people with motor impairments to input text into an AAC device: direct selection; scanning; and pointing and gestures (Polacek, Sporka, & Slavik, 2017). Direct selection requires users to select a key out of a set of keys, which is usually organized in a way that reduces the number of keys in the set (e.g. clustering of letters). Scanning requires only one signal from the user; they can trigger a step (move onto the next option or ask the computer to scan automatically through the options) or make a selection. This signal from the user can come from a button that must be pressed, as well as from non-traditional input methods (e.g. bite switch, eye blinks, muscle contractions, nonverbal vocalizations). Finally, pointing and gestures require interaction with a mouse or joystick (if motor skills are sufficient), or the use of head movement, eye movement and biosignals such as muscle contractions (EMG) or brain signals (EEG). Existing devices take advantage of these input methods differently, depending on the severity of the user’s motor impairment.
