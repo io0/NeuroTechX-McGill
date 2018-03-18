@@ -1,5 +1,4 @@
-
-# chattERP JENISHA PLEASE MAKE PULL REQUESTS
+# chattERP
 
 ChattERP is an assistive and augmentative communication (AAC) device for individuals with speech and motor disabilities which strives to allow for rapid verbal communication where it is otherwise impossible. ChattERP harnesses the power of the P300 event-related potential as measured by the low-cost OpenBCI, an open-source brain-computer interface platform, to allow for text and emoji communication that is solely neural based. Electroencephalography (EEG) is used to detect the P300 induced by a speller matrix when the user-intended row and column flash. This project aims to integrate feedback from potential BCI end-users found in the literature, which highlights specific issues with current EEG-based BCIs, such as speed, cost and difficult set-up, as well as exciting avenues to explore, like interfaces with other electronics. The integration of neuroscience principles, linguistics research, and artificial intelligence methods yields a low-cost, multifunctional and accessible P300-based communication tool. We also expect that the addition of intuitive speech prediction technology and modern interface will improve the standard for AAC devices currently on the market.
 
@@ -36,6 +35,7 @@ Training data for the classifier is located in `training_data.csv` and can be re
 
 ## Speller interface
 The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output.
+<img src="https://media.giphy.com/media/9PvaOvdBv9OXTfxfGY/giphy.gif" width="1000" height="500">
 
 ![Alt Text](https://media.giphy.com/media/9PvaOvdBv9OXTfxfGY/giphy.gif)
 
