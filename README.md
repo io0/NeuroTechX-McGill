@@ -27,11 +27,9 @@ For more information on the scientific, market and user research that went into 
    - Soft measuring tape to locate 10-20 electrode positioning
 
 **2. Computer & Software**
-   - Speller interface (TODO: LINK TO OURS)
+   - [Speller interface](https://github.com/io0/NeuroTechX-McGill/blob/master/frontend/README_frontend.md)
    - [EEG signal processing pipeline](https://github.com/io0/NeuroTechX-McGill/blob/master/classifier.py)
    
-**3. Equipment**
-(TODO: ADD PICTURES)
 
 ## Procedure
 EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See [README_OpenBCI_Python.md](https://github.com/io0/NeuroTechX-McGill/blob/master/README_OpenBCI_Python.md) for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
