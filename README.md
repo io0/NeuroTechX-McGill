@@ -28,7 +28,7 @@ For more information on the scientific, market and user research that went into 
 
 **2. Computer & Software**
    - Speller interface (TODO: LINK TO OURS)
-   - EEG signal processing pipeline (TODO: LINK TO OURS)
+   - [EEG signal processing pipeline](https://github.com/io0/NeuroTechX-McGill/blob/master/classifier.py)
    
 **3. Equipment**
 (TODO: ADD PICTURES)
