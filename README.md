@@ -14,8 +14,8 @@ For more information on the scientific, market and user research that went into 
    - Soft measuring tape to locate 10-20 electrode positioning
 
 **2. Computer & Software**
-   - Speller interface (LINK TO OURS)
-   - EEG signal processing pipeline (LINK TO OURS)
+   - Speller interface (TODO: LINK TO OURS)
+   - EEG signal processing pipeline (TODO: LINK TO OURS)
    
 **3. Equipment**
 (TODO: ADD PICTURES)
@@ -28,10 +28,21 @@ Training data for the classifier is located in `training_data.csv` and can be re
 
 * [Python 2.7](https://www.python.org/download/releases/2.7/) or later
 * [Numpy 1.7](http://www.numpy.org/) or later
+* [Pandas 0.22.0](https://pandas.pydata.org/)
+* [SciPy 1.0](https://www.scipy.org/)
+* [Matplotlib 2.2.0](https://matplotlib.org/)
+* [Scikit-learn 0.19.1](http://scikit-learn.org/stable/)
 * Signal acquisition dependencies located in [`requirements.txt`](https://github.com/io0/NeuroTechX-McGill/blob/master/requirements.txt)
+
 ## Signal processing
 
-![Response plot](avg_response.png)
+**1. Filtering with a Bandpass Butterorth Filter **
+
+**2. Downsampling **
+
+**3. Target signal acqusition **
+![Response plot](https://github.com/io0/NeuroTechX-McGill/blob/master/figures/avg_response.pngp)
+
 
 ## Speller interface
 The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output.
