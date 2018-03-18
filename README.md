@@ -32,12 +32,14 @@ Training data for the classifier is located in `training_data.csv` and can be re
 * Signal acquisition dependencies located in [`requirements.txt`](https://github.com/io0/NeuroTechX-McGill/blob/master/requirements.txt)
 ## Signal processing
 
-![Response plot](avg_response.png)!
+![Response plot](avg_response.png)
+
 ## Speller interface
 The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output.
 
 ![Alt Text](https://media.giphy.com/media/9PvaOvdBv9OXTfxfGY/giphy.gif)
 
 ## The Team
-McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology. The team consists of an interdisciniplinary group of dedicated students.
+McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology.
+The team consists of an interdisciniplinary group of dedicated students.
 <img src="https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png" width="100" height="100">
