@@ -51,7 +51,7 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 ## Signal processing
 Channel data were filtered, split into windows of 600 ms starting at stimulus onset, and downsampled to 25 Hz. We applied a butterworth 0.5 - 20 Hz bandpass filter using scipy.signal.
 
-Parameters for filtering and downsampling were chosen through offline analysis of P300 recording sessions. We were able to obtain the following plot using electrodes O1 and O2.
+Parameters for filtering and downsampling were chosen through offline analysis of P300 recording sessions. We were able to obtain the following plot using electrodes PO3 and PO4.
 ![Response plot](/figures/avg_response.png)
 
 ## Prediction pipeline
@@ -65,7 +65,7 @@ Once three trials (showings of each row and column) have occurred, the block of 
 
 ## Speller interface
 The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output.
-<img src="https://media.giphy.com/media/9PvaOvdBv9OXTfxfGY/giphy.gif" width="1000" height="500">
+<img src="https://media.giphy.com/media/1BhDpEtftozn6M0naw/giphy.gif" width="1000" height="500">
 
 
 ## The Team
