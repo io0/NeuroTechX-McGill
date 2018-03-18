@@ -31,12 +31,11 @@ For more information on the scientific, market and user research that went into 
    - [Speller interface](https://github.com/io0/NeuroTechX-McGill/blob/master/frontend/README_frontend.md)
    - [EEG signal processing pipeline](https://github.com/io0/NeuroTechX-McGill/blob/master/classifier.py)
    - Tested on Windows 10
-   - Frontend runs on Chrome Browser
-   
-**3. Equipment**
-(TODO: ADD PICTURES)
+   - Frontend runs on [Google Chrome](https://www.google.com/chrome/)
 
 ## Procedure
+
+**A. Backend procedure** <br>
 EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See [README_OpenBCI_Python.md](https://github.com/io0/NeuroTechX-McGill/blob/master/README_OpenBCI_Python.md) for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
 
 ![Command](/figures/plugin_activation.png)
@@ -44,6 +43,14 @@ EEG signals are acquired in real time by invoking `python user.py -p COM6 --add 
 Command line output with model probability predictions
 
 The plugin looks for training data in `data`. Files in `data` can be replaced at any time with more recent calibration sessions.
+
+**B. GUI procedure** <br>
+1. Download LTS version of [Node.js](https://nodejs.org/en/download/current/)
+2. Open terminal and migrate to the `NeuroTechX-McGill/frontend/` directory on your computer
+3. Run `npm install` in terminal -- this will install all necessary dependencies
+4. Launch chattERP by running `node app` in terminal
+5. Open Google Chrome and go to [localhost:3000](http://localhost:3000)
+
 
 ## Dependencies:
 
@@ -61,6 +68,7 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 Channel data were filtered, split into windows of 600 ms starting at stimulus onset, and downsampled to 25 Hz. We applied a butterworth 0.5 - 20 Hz bandpass filter using scipy. The result is a vector with 15 features that can be passed to the LDA classifier. With our pipeline, we were able to obtain validation accuracies of 82%.
 
 Parameters for filtering and downsampling were chosen through offline analysis of P300 recording sessions. We were able to obtain the following plot using electrodes PO3 and PO4.
+![Electrode locations](/figures/electrode_locations.png)
 ![Response plot](/figures/avg_response.png)
 
 ## Prediction pipeline
