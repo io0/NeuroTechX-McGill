@@ -1,0 +1,99 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "awesomplete",
+        "scope": null,
+        "escapedName": "awesomplete",
+        "name": "awesomplete",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/2016/lshann/MENTALfrontend"
+    ]
+  ],
+  "_from": "awesomplete@latest",
+  "_id": "awesomplete@1.1.2",
+  "_inCache": true,
+  "_location": "/awesomplete",
+  "_nodeVersion": "7.8.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/awesomplete-1.1.2.tgz_1498675406415_0.7790521238930523"
+  },
+  "_npmUser": {
+    "name": "leaverou",
+    "email": "lea@verou.me"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "awesomplete",
+    "scope": null,
+    "escapedName": "awesomplete",
+    "name": "awesomplete",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/awesomplete/-/awesomplete-1.1.2.tgz",
+  "_shasum": "b6e253f73474e46278bba5ae7f81d4262160fb75",
+  "_shrinkwrap": null,
+  "_spec": "awesomplete",
+  "_where": "/home/2016/lshann/MENTALfrontend",
+  "author": {
+    "name": "Lea Verou"
+  },
+  "bugs": {
+    "url": "https://github.com/LeaVerou/awesomplete/issues"
+  },
+  "dependencies": {},
+  "description": "http://leaverou.github.io/awesomplete/",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.7.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-fixture": "^0.2.5",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-jasmine-def": "^0.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "b6e253f73474e46278bba5ae7f81d4262160fb75",
+    "tarball": "https://registry.npmjs.org/awesomplete/-/awesomplete-1.1.2.tgz"
+  },
+  "gitHead": "b98f47b909d1764e40e830108f1a6937b5641b92",
+  "homepage": "https://leaverou.github.io/awesomplete/",
+  "license": "MIT",
+  "main": "awesomplete.js",
+  "maintainers": [
+    {
+      "name": "leaverou",
+      "email": "lea@verou.me"
+    }
+  ],
+  "name": "awesomplete",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaverou/awesomplete.git"
+  },
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "version": "1.1.2"
+}

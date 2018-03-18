@@ -1,0 +1,46 @@
+{
+  "name": "mentalfrontend",
+  "version": "1.0.0",
+  "description": "An accessibility typing application for patients with locked-in syndrome",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nykanm/MENTALfrontend.git"
+  },
+  "author": "MENTAL Frontend Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nykanm/MENTALfrontend/issues"
+  },
+  "homepage": "https://github.com/nykanm/MENTALfrontend#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.7.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-fixture": "^0.2.5",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-jasmine-def": "^0.1.0"
+  },
+  "dependencies": {
+    "boom": "^7.2.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "hapi": "^17.2.3",
+    "hapi-require-https": "^3.0.0",
+    "inert": "^5.1.0",
+    "nodemailer": "^4.6.3",
+    "osc.io": "0.0.3",
+    "socket.io": "^2.0.4"
+  }
+}

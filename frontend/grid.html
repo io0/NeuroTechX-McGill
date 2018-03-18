@@ -1,0 +1,301 @@
+<!doctype html>
+
+<html>
+    <head>
+ <meta charset='utf-8'>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="awesomplete.js"></script>
+  <!--<script src="index.js"></script>-->
+  <script src="./main.js"></script>	
+  <!-- ResponsiveVoice JS, text-to-speech -->
+  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+
+  
+   <link rel="stylesheet" href="prism/prism.css" />
+<link rel="stylesheet" href="awesomplete.css" />
+ <!-- <link rel="stylesheet" href="style.css" /> -->
+  
+  
+
+        <title>Grid Template</title>
+    </head>
+
+    <body class="language-markup">
+      
+      <div class="text-insert">
+ 
+      <section id="ajax-example">
+        <input id="inputText" type="text" data-maxitems="3" data-minchars="1" placeholder="INSERT TEXT HERE" style="width:900px">
+<!--           <script>
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", "https://restcountries.eu/rest/v1/lang/fr", true);
+          ajax.onload = function() {
+            var list = JSON.parse(ajax.responseText).map(function(i) { return i.name; });
+            new Awesomplete(document.querySelector("#ajax-example input"),{ list: list });
+          };
+          ajax.send();
+          </script> -->
+
+          <script>
+            function speech(){
+              var input = document.getElementById('inputText').value
+              responsiveVoice.speak(input); //lets make this activate only when selected with button
+            }
+          </script>
+          
+        </section>
+      </div>
+
+
+
+
+        <div class="grid-item row-0 col-0 spacebar" style="width:80px">
+                      __
+                    </div>
+                  <div class="grid-item row-0 col-1" style="width:80px">
+                      ❌
+                    </div>
+                    <div class="grid-item row-0 col-2 emojibtn" style="width:80px; font-size:20px">
+                      ABC<br> 😄
+                  </div> 
+                  <div class="grid-item row-0 col-3" style="width:80px; cursor:pointer" onclick="speech()">
+                    🔊
+                  </div>
+          
+          </div>
+      
+        <div class="grid-container letters">
+          <!-- BEGIN LETTER/# GRID -->
+            <div class="grid-item row-1 col-0 A">
+            	A
+            </div>
+            <div class="grid-item row-1 col-1 B">
+            	B
+            </div>
+            <div class="grid-item row-1 col-2 C">
+            	C
+            </div>
+            <div class="grid-item row-1 col-3 D">
+            	D
+            </div>
+            <div class="grid-item row-1 col-4 E">
+            	E
+            </div>
+            <div class="grid-item row-1 col-5 F">
+            	F
+            </div>
+            <div class="grid-item row-2 col-0 G">
+            	G
+            </div>
+            <div class="grid-item row-2 col-1 H">
+            	H
+            </div>
+            <div class="grid-item row-2 col-2 I">
+            	I
+            </div>
+            <div class="grid-item row-2 col-3 J">
+            	J
+            </div>
+            <div class="grid-item row-2 col-4 K">
+            	K
+            </div>
+            <div class="grid-item row-2 col-5 L">
+            	L
+            </div>
+            <div class="grid-item row-3 col-0 M">
+            	M
+            </div>
+            <div class="grid-item row-3 col-1 N">
+            	N
+            </div>
+            <div class="grid-item row-3 col-2 O">
+            	O
+            </div>
+            <div class="grid-item row-3 col-3 P">
+            	P
+            </div>
+            <div class="grid-item row-3 col-4 Q">
+            	Q
+            </div>
+            <div class="grid-item row-3 col-5 R">
+            	R
+            </div>
+            <div class="grid-item row-4 col-0 S">
+            	S
+            </div>
+            <div class="grid-item row-4 col-1 T">
+            	T
+            </div>
+            <div class="grid-item row-4 col-2 U">
+            	U
+            </div>
+            <div class="grid-item row-4 col-3 V">
+            	V
+            </div>
+            <div class="grid-item row-4 col-4 W">
+            	W
+            </div>
+            <div class="grid-item row-4 col-5 X">
+            	X
+            </div>
+            <div class="grid-item row-5 col-0 Y">
+            	Y
+            </div>
+            <div class="grid-item row-5 col-1 Z">
+            	Z
+            </div>
+            <div class="grid-item row-5 col-2 0">
+            	0
+            </div>
+            <div class="grid-item row-5 col-3 1">
+            	1
+            </div>
+            <div class="grid-item row-5 col-4 2">
+            	2
+            </div>
+            <div class="grid-item row-5 col-5 3">
+            	3
+            </div>
+            <div class="grid-item row-6 col-0 4">
+            	4
+            </div>
+            <div class="grid-item row-6 col-1 5">
+            	5
+            </div>
+            <div class="grid-item row-6 col-2 6">
+            	6
+            </div>
+            <div class="grid-item row-6 col-3 7">
+            	7
+            </div>
+            <div class="grid-item row-6 col-4 8">
+            	8
+            </div>
+            <div class="grid-item row-6 col-5 9">
+            	9
+            </div>
+      </div>
+           <!-- BEGIN EMOJI GRID -->
+                  <div class="grid-container emoji">
+
+            <div class="grid-item row-1 col-0 emoji1">
+            	👍
+            </div>
+            <div class="grid-item row-1 col-1 emoji2">
+            	👎
+            </div>
+            <div class="grid-item row-1 col-2 emoji3">
+            	😊
+            </div>
+            <div class="grid-item row-1 col-3 emoji4">
+              😍
+            </div>
+            <div class="grid-item row-1 col-4 emoji5">
+            	😉
+            </div>
+            <div class="grid-item row-1 col-5 emoji6">
+            	😡
+            </div>
+            <div class="grid-item row-2 col-0 emoji7">
+            	🍴
+            </div>
+            <div class="grid-item row-2 col-1 emoji8">
+            	💧
+            </div>
+            <div class="grid-item row-2 col-2 emoji9">
+            	☕️
+            </div>
+            <div class="grid-item row-2 col-3 emoji10">
+            	🍕
+            </div>
+            <div class="grid-item row-2 col-4 emoji11">
+            	🍆
+            </div>
+            <div class="grid-item row-2 col-5 emoji12">
+            	🍑
+            </div>
+            <div class="grid-item row-3 col-0 emoji13">
+            	😻
+            </div>
+            <div class="grid-item row-3 col-1 emoji14">
+            	🐼
+            </div>
+            <div class="grid-item row-3 col-2 emoji15">
+              🐨
+            </div>
+            <div class="grid-item row-3 col-3 emoji16">
+            	🐍
+            </div>
+            <div class="grid-item row-3 col-4 emoji17">
+            	🐫
+            </div>
+            <div class="grid-item row-3 col-5 emoji18">
+            	👽
+            </div>
+            <div class="grid-item row-4 col-0 emoji19">
+            	🕰️
+            </div>
+            <div class="grid-item row-4 col-1 emoji20">
+            	📸
+            </div>
+            <div class="grid-item row-4 col-2 emoji21">
+            	🚗
+            </div>
+            <div class="grid-item row-4 col-3 emoji22">
+            	😴
+            </div>
+            <div class="grid-item row-4 col-4 emoji23">
+            	🚿
+            </div>
+            <div class="grid-item row-4 col-5 emoji24">
+            	🎧
+            </div>
+            <div class="grid-item row-5 col-0 emoji25">
+            	🙏
+            </div>
+            <div class="grid-item row-5 col-1 emoji26">
+            	👏
+            </div>
+            <div class="grid-item row-5 col-2 emoji27">
+            	❤️
+            </div>
+            <div class="grid-item row-5 col-3 emoji28">
+            	✌️
+            </div>
+            <div class="grid-item row-5 col-4 emoji29">
+            	👋
+            </div>
+            <div class="grid-item row-5 col-5 emoji30">
+            	🤘
+            </div>
+            <div class="grid-item row-6 col-0 emoji31">
+            	🙃
+            </div>
+            <div class="grid-item row-6 col-1 emoji32">
+            	🎂
+            </div>
+            <div class="grid-item row-6 col-2 emoji33">
+            	⚽
+            </div>
+            <div class="grid-item row-6 col-3 emoji34">
+            	🌚
+            </div>
+            <div class="grid-item row-6 col-4 emoji35">
+            	🤔
+            </div>
+            <div class="grid-item row-6 col-5 emoji36">
+            	🔥
+            </div>
+          </div>
+
+ 
+    </body>
+
+    <footer>
+        <div class="Footer">
+          <p style="text-align: center;">© MENTAL Frontend Team 2018</p>
+        </div>
+    </footer>
+</html>

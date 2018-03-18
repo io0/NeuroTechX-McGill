@@ -1,0 +1,74 @@
+body {
+  background: #373737;
+}
+
+p {
+  color: #cacaca;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto auto auto;
+  padding: 20px;
+}
+.grid-item {
+  background-color: #1a1a1a;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  width:80px;
+  height:40px;
+}
+
+.litup {
+  background-color: #ffb3b3;
+  color: black;
+}
+
+.text-insert {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 30px;
+  min-width:350px;
+  padding-bottom:100px;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+input {
+  width: 12em;
+  font-size:1.3em;
+  padding: .1em .3em;
+  border: 0;
+  border: 1px solid hsl(35, 80%, 60%);
+  background: hsla(0,0%,100%,.9);
+  border-radius: .3em;
+  box-shadow: .05em .1em .3em rgba(0,0,0,.3) inset;
+}
+
+@keyframes pulsate {
+  to {
+    box-shadow: .05em .1em .3em rgba(0,0,0,.3) inset, 0 0 .3em .1em #58a;
+  }
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #58a;
+  animation: pulsate 2s infinite alternate linear;
+  background: hsla(0,0%,100%,.5);
+}
+
