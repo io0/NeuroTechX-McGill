@@ -16,20 +16,23 @@ For more information on the scientific, market and user research that went into 
 - `\classifier.py` is the main module for real-time P300 detection
 - `\plugins\streamer_osc.py` streams predictions to OSC clients
 - `\open_bci_v3.py` and `\user.py` instantiate the board and feed data to our plugin
+- `\frontend` contains all modules pertaining to the frontend display
 
 ## Setup
 **1. Hardware**
    - Open BCI Cyton Board
       - 4x AA batteries 
-      - Earlobe clips    
+      - 2x Earlobe clips (Ground and mastoid reference) 
       - Wet/dry electrodes (+ conductive gel for wet electrodes)   
       - (Optional: Ultracortex)   
    - Soft measuring tape to locate 10-20 electrode positioning
 
 **2. Computer & Software**
-   - [Speller interface](https://github.com/io0/NeuroTechX-McGill/blob/master/frontend/README_frontend.md)
+   - Speller interface (TODO: LINK TO OURS)
    - [EEG signal processing pipeline](https://github.com/io0/NeuroTechX-McGill/blob/master/classifier.py)
    
+**3. Equipment**
+(TODO: ADD PICTURES)
 
 ## Procedure
 EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See [README_OpenBCI_Python.md](https://github.com/io0/NeuroTechX-McGill/blob/master/README_OpenBCI_Python.md) for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
@@ -67,6 +70,8 @@ The server communication library included with the software emits OSC formatted 
 
 <img src="https://media.giphy.com/media/1BhDpEtftozn6M0naw/giphy.gif" width="1000" height="500">
 
+## Future Steps
+We would like to implement real-time data visualization in conjunction with the speller, so that the signal can be monitored more easily. As well, instead of recording training data beforehand, we would like to add an online calibration phase.
 
 ## The Team
 McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology.
