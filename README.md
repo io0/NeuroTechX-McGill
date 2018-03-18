@@ -27,21 +27,26 @@ For more information on the scientific, market and user research that went into 
    - Soft measuring tape to locate 10-20 electrode positioning
 
 **2. Computer & Software**
-   - Speller interface (LINK TO OURS)
-   - EEG signal processing pipeline (LINK TO OURS)
+   - Speller interface (TODO: LINK TO OURS)
+   - EEG signal processing pipeline (TODO: LINK TO OURS)
    
 **3. Equipment**
 (TODO: ADD PICTURES)
 
 ## Procedure
 EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See [README_OpenBCI_Python.md](https://github.com/io0/NeuroTechX-McGill/blob/master/README_OpenBCI_Python.md) for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
-The plugin looks for training data in `\data`. Files in `\data` can be replaced at any time with more recent calibration sessions.
+The plugin looks for training data in `data`. Files in `data` can be replaced at any time with more recent calibration sessions.
 
 ## Dependencies:
 
 * [Python 2.7](https://www.python.org/download/releases/2.7/) or later
 * [Numpy 1.7](http://www.numpy.org/) or later
+* [Pandas 0.22.0](https://pandas.pydata.org/)
+* [SciPy 1.0](https://www.scipy.org/)
+* [Matplotlib 2.2.0](https://matplotlib.org/)
+* [Scikit-learn 0.19.1](http://scikit-learn.org/stable/)
 * Signal acquisition dependencies located in [`requirements.txt`](https://github.com/io0/NeuroTechX-McGill/blob/master/requirements.txt)
+
 ## Signal processing
 Channel data were filtered, split into windows of 600 ms starting at stimulus onset, and downsampled to 25 Hz. We applied a butterworth 0.5 - 20 Hz bandpass filter using scipy.signal.
 Parameters for filtering and downsampling were chosen through offline analysis of P300 recording sessions. We were able to obtain the following plot using electrodes O1 and O2.
@@ -55,10 +60,10 @@ Once three trials (showings of each row and column) have occurred, the block of 
 
 ## Speller interface
 The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output.
+<img src="https://media.giphy.com/media/9PvaOvdBv9OXTfxfGY/giphy.gif" width="1000" height="500">
 
-![Alt Text](https://media.giphy.com/media/9PvaOvdBv9OXTfxfGY/giphy.gif)
 
 ## The Team
-<img src="https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png" width="500" height="500">
 McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology.
 The team consists of an interdisciniplinary group of dedicated students.
+<img src="https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png" width="500" height="500">
