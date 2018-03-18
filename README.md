@@ -40,6 +40,6 @@ The server communication library included with the software emits OSC formatted 
 ![Alt Text](https://media.giphy.com/media/9PvaOvdBv9OXTfxfGY/giphy.gif)
 
 ## The Team
-<img src="https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png" width="100" height="100">
+<img src="https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png" width="500" height="500">
 McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology.
 The team consists of an interdisciniplinary group of dedicated students.
