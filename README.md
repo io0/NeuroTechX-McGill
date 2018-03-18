@@ -1,4 +1,4 @@
-[# chattERP
+# chattERP
 
 ChattERP is an assistive and augmentative communication (AAC) device for individuals with speech and motor disabilities which strives to allow for rapid verbal communication where it is otherwise impossible. ChattERP harnesses the power of the P300 event-related potential as measured by the low-cost OpenBCI, an open-source brain-computer interface platform, to allow for text and emoji communication that is solely neural based. Electroencephalography (EEG) is used to detect the P300 induced by a speller matrix when the user-intended row and column flash. This project aims to integrate feedback from potential BCI end-users found in the literature, which highlights specific issues with current EEG-based BCIs, such as speed, cost and difficult set-up, as well as exciting avenues to explore, like interfaces with other electronics. The integration of neuroscience principles, linguistics research, and artificial intelligence methods yields a low-cost, multifunctional and accessible P300-based communication tool. We also expect that the addition of intuitive speech prediction technology and modern interface will improve the standard for AAC devices currently on the market.
 
@@ -39,4 +39,4 @@ The server communication library included with the software emits OSC formatted 
 
 ## The Team
 McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology. The team consists of an interdisciniplinary group of dedicated students.
-![Alt Text](https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png)
+![Alt Text](https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png| width=100)
