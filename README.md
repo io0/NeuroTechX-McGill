@@ -68,7 +68,7 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 Channel data were filtered, split into windows of 600 ms starting at stimulus onset, and downsampled to 25 Hz. We applied a butterworth 0.5 - 20 Hz bandpass filter using scipy. The result is a vector with 15 features that can be passed to the LDA classifier. With our pipeline, we were able to obtain validation accuracies of 82%.
 
 Parameters for filtering and downsampling were chosen through offline analysis of P300 recording sessions. We were able to obtain the following plot using electrodes PO3 and PO4.
-![Electrode locations](/figures/electrode_locations.png)
+
 ![Response plot](/figures/avg_response.png)
 
 ## Prediction pipeline
