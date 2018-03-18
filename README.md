@@ -38,9 +38,8 @@ For more information on the scientific, market and user research that went into 
 **A. Backend procedure** <br>
 EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See [README_OpenBCI_Python.md](https://github.com/io0/NeuroTechX-McGill/blob/master/README_OpenBCI_Python.md) for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
 
-![Command](/figures/plugin_activation.png)
-
-Command line output with model probability predictions
+This is the command line output with model probability predictions:
+![Command](/figures/plugin_activation.png) 
 
 The plugin looks for training data in `data`. Files in `data` can be replaced at any time with more recent calibration sessions.
 
@@ -89,7 +88,7 @@ The server communication library included with the software emits OSC formatted 
 We would like to implement real-time data visualization in conjunction with the speller, so that the signal can be monitored more easily. As well, instead of recording training data beforehand, we would like to add an online calibration phase.
 
 ## The Team
-McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology.
-The team consists of an interdisciniplinary group of dedicated students.
+[McGill Enthusiasts for NeuroTechnology et al (MENTAL)](https://www.facebook.com/McGillNeurotech/) is a club whose mandate is to raise awareness and interest in neurotechnology.
+The team consists of an interdisciplinary group of dedicated undergraduate students from McGill University.
 
 <img src="https://github.com/io0/NeuroTechX-McGill/blob/master/MENTAL_logo.png" width="100" height="100">
