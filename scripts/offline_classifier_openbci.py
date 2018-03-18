@@ -42,7 +42,7 @@ stims = np.loadtxt('../data/target.txt', dtype=np.uint)
 nstims = np.loadtxt('../data/nontarget.txt', dtype=np.uint)
 
 fs = 250
-ds_factor = 3 # downsampling factor
+ds_factor = 10 # downsampling factor
 s1 = filter_(data.T, 0.4, 20,1) #filter data
 
 # Plot filtered data

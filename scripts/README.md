@@ -1,2 +1,2 @@
-Various use-case of `open_bci_v3.py` for those who don't want to go through `user.py` and plugins -- but beware of code fragmentation!
 ![Filtering plot](filtering.png)!
+Comparing raw signal to filtered signal; applying 2nd order butter bandpass filter,  at a lowcut of 0.5Hz and highcut of 2_Hz; 2sec recording
