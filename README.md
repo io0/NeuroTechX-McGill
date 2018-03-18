@@ -30,6 +30,8 @@ For more information on the scientific, market and user research that went into 
 **2. Computer & Software**
    - [Speller interface](https://github.com/io0/NeuroTechX-McGill/blob/master/frontend/README_frontend.md)
    - [EEG signal processing pipeline](https://github.com/io0/NeuroTechX-McGill/blob/master/classifier.py)
+   - Tested on Windows 10
+   - Frontend runs on Chrome Browser
    
 **3. Equipment**
 (TODO: ADD PICTURES)
@@ -38,7 +40,8 @@ For more information on the scientific, market and user research that went into 
 EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See [README_OpenBCI_Python.md](https://github.com/io0/NeuroTechX-McGill/blob/master/README_OpenBCI_Python.md) for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
 
 ![Command](/figures/plugin_activation.png)
-Command line output
+
+Command line output with model probability predictions
 
 The plugin looks for training data in `data`. Files in `data` can be replaced at any time with more recent calibration sessions.
 
