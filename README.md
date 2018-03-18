@@ -19,18 +19,21 @@ The following hardware are used:
 (TODO: ADD PICTURES)
 
 ## Procedure
-After downloading the repository, the dependencies are installed and run using Python command “user.py -p COM6--add streamer_osc”. This connects to the board and the command is sent to “/start” when prompted. The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output. 
+EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See README_OpenBCI_Python.md for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
+Training data for the classifier is located in `training_data.csv` and can be replaced at any time with more recent calibration sessions.
 
-![Response plot](avg_response.png)!
 
 
 ## Dependencies:
 
 * [Python 2.7](https://www.python.org/download/releases/2.7/) or later
 * [Numpy 1.7](http://www.numpy.org/) or later 
-* [Yapsy](http://yapsy.sourceforge.net/) -- if using pluging via `user.py`
-* Signal acquisition dependencies located in [requirements.txt](https://github.com/OpenBCI/OpenBCI_Python/blob/master/requirements.txt)
+* Signal acquisition dependencies located in `requirements.txt`
+## Signal processing
 
+![Response plot](avg_response.png)!
+## Speller interface
+The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output. 
 ## The Team
 McGill Enthusiasts for NeuroTechnology et al (MENTAL) is a club whose mandate is to raise awareness and interest in neurotechnology. We are an interdisciplinary team of students from many different Faculties. 
 (TODO: ADD our logo)
