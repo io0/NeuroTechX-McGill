@@ -56,6 +56,8 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 * Signal acquisition dependencies located in [`requirements.txt`](https://github.com/io0/NeuroTechX-McGill/blob/master/requirements.txt)
 
 ## Signal processing
+![Preprocessing pipeline](/figures/preprocessing_pipeline.png)
+
 Channel data were filtered, split into windows of 600 ms starting at stimulus onset, and downsampled to 25 Hz. We applied a butterworth 0.5 - 20 Hz bandpass filter using scipy.signal.
 
 Parameters for filtering and downsampling were chosen through offline analysis of P300 recording sessions. We were able to obtain the following plot using electrodes PO3 and PO4.
