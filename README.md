@@ -52,8 +52,7 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 5. Open Google Chrome and go to [localhost:3000](http://localhost:3000)
 
 
-## Dependencies:
-
+## Dependencies
 * [Python 2.7](https://www.python.org/download/releases/2.7/) or later
 * [Numpy 1.7](http://www.numpy.org/) or later
 * [Pandas 0.22.0](https://pandas.pydata.org/)
