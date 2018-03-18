@@ -35,6 +35,7 @@ For more information on the scientific, market and user research that went into 
 
 ## Procedure
 EEG signals are acquired in real time by invoking `python user.py -p COM6 --add streamer_osc` on the command line, with COM6 specifying the OpenBCI port. See [README_OpenBCI_Python.md](https://github.com/io0/NeuroTechX-McGill/blob/master/README_OpenBCI_Python.md) for more details. This connects to the board, and allows the user to send the command `/start` to commence acquisition.
+
 The plugin looks for training data in `data`. Files in `data` can be replaced at any time with more recent calibration sessions.
 
 ## Dependencies:
@@ -49,13 +50,17 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 
 ## Signal processing
 Channel data were filtered, split into windows of 600 ms starting at stimulus onset, and downsampled to 25 Hz. We applied a butterworth 0.5 - 20 Hz bandpass filter using scipy.signal.
+
 Parameters for filtering and downsampling were chosen through offline analysis of P300 recording sessions. We were able to obtain the following plot using electrodes O1 and O2.
 ![Response plot](/figures/avg_response.png)
 
 ## Prediction pipeline
 The classifier module manages data and performs predictions at intervals specified by the frontend. Upon initialization, session variables are created and the LDA model is fit to pre-recorded data.
+
 Given the occurrence of sample drifting and unreliable arrival times, we decided to use a predetermined stimulus onset start time and the known sampling frequency to determine when to predict P300. Since samples are guaranteed to arrive in sequence, we use the sample count to mediate prediction blocks. 
+
 Data is stored in a buffer in the inter-trial time so that filtering is passed through the buffer before the trial data, eliminating filtering artifacts.
+
 Once three trials (showings of each row and column) have occurred, the block of trial data is processed as described above and epoched. Epochs are then grouped by the column or row that had been shown and passed to the LDA model, which outputs the probability of P300 for the epoch. The group with the highest average probability among the row groups and among the column groups is selected as the prediction.
 
 ## Speller interface
