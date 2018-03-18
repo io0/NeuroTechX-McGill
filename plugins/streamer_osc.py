@@ -53,7 +53,11 @@ class StreamerOSC(plugintypes.IPluginExtended):
             message = self.clf.add_sample(sample)
             if message != '':
                 print(message)
-                self.client.send_message(self.address, message)
+                # self.client.send_message(self.address, message)
+                # Node server is really wonky and takes in the entire message
+                # such that it would be recieved as : /openbci, ???
+                # Not sure how to decode the second part so this is a current hack.
+                self.client.send_message(str(message), 1)
         except:
             return
 
