@@ -28,7 +28,7 @@ For more information on the scientific, market and user research that went into 
    - Soft measuring tape to locate 10-20 electrode positioning
 
 **2. Computer & Software**
-   - [Speller interface](https://github.com/io0/NeuroTechX-McGill/blob/master/frontend/README_frontend.md)
+   - [Speller interface](https://github.com/io0/NeuroTechX-McGill/blob/master/frontend/README.md)
    - [EEG signal processing pipeline](https://github.com/io0/NeuroTechX-McGill/blob/master/classifier.py)
    - Tested on Windows 10
    - Frontend runs on [Google Chrome](https://www.google.com/chrome/)
@@ -43,7 +43,7 @@ This is the command line output with model probability predictions:
 
 The plugin looks for training data in `data`. Files in `data` can be replaced at any time with more recent calibration sessions.
 
-**B. GUI procedure** <br>
+**B. Frontend procedure** <br>
 1. Download LTS version of [Node.js](https://nodejs.org/en/download/current/)
 2. Open terminal and migrate to the `NeuroTechX-McGill/frontend/` directory on your computer
 3. Run `npm install` in terminal -- this will install all necessary dependencies
