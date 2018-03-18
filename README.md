@@ -58,7 +58,8 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 * [SciPy 1.0](https://www.scipy.org/)
 * [Matplotlib 2.2.0](https://matplotlib.org/)
 * [Scikit-learn 0.19.1](http://scikit-learn.org/stable/)
-* Signal acquisition dependencies located in [`requirements.txt`](https://github.com/io0/NeuroTechX-McGill/blob/master/requirements.txt)
+* Signal acquisition dependencies located in [`requirements_signal.txt`](https://github.com/io0/NeuroTechX-McGill/blob/master/requirements_signal.txt)
+* Frontend dependencies located in [`requirements_frontend.txt`](https://github.com/io0/NeuroTechX-McGill/blob/master/requirements_frontend.txt)
 
 ## Signal processing
 ![Preprocessing pipeline](/figures/preprocessing_pipeline.png)
