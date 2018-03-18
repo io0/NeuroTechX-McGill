@@ -35,15 +35,15 @@ def epoch_data(arr, stims, window_length):
     n = np.array(new_arr)
     print(n.shape)
     return n
-plot_flag = 0
+plot_flag = 1
 data = np.loadtxt('../data/raw_training.txt',
                       delimiter=',').T
 stims = np.loadtxt('../data/target.txt', dtype=np.uint)
 nstims = np.loadtxt('../data/nontarget.txt', dtype=np.uint)
 
 fs = 250
-ds_factor = 1 # downsampling factor
-s1 = filter_(data.T, 0.4, 30,1) #filter data
+ds_factor = 3 # downsampling factor
+s1 = filter_(data.T, 0.4, 20,1) #filter data
 
 # Plot filtered data
 plt.figure()
@@ -51,10 +51,10 @@ for ch in s1.T:
     plt.plot(ch)
 
 # Epoch and downsample
-t_ep = epoch_data(s1, stims, int(0.6*fs))
-t_ep = t_ep[:, ::ds_factor]
-n_ep = epoch_data(s1, nstims, int(0.6*fs))
-n_ep = n_ep[:, ::ds_factor]
+t_ep1 = epoch_data(s1, stims, int(0.6*fs))
+t_ep = t_ep1[:, ::ds_factor]
+n_ep1 = epoch_data(s1, nstims, int(0.6*fs))
+n_ep = n_ep1[:, ::ds_factor]
 
 # Prepare inputs for classifier
 t_ep = np.hstack((t_ep, np.ones([t_ep.shape[0],1])))
@@ -74,14 +74,13 @@ print(cv_results)
     
 if plot_flag:
     plt.figure()
-    for ep in n_ep[:20]:
+    for ep in n_ep1[:20]:
         plt.plot(ep)
     
     plt.figure()
     x = np.arange(600, step=4)
-    x = x[:-4]
-    plt.plot(x, np.mean(t_ep, axis=0)[:-5], label="Target stimulus")
-    plt.plot(x, np.mean(n_ep, axis=0)[:-5], label="Nontarget stimulus")
+    plt.plot(x, np.mean(t_ep1, axis=0)[:], label="Target stimulus")
+    plt.plot(x, np.mean(n_ep1, axis=0)[:], label="Nontarget stimulus")
     plt.title('Averaged response to flashing stimuli')
     plt.xlabel('Time (ms)')
     plt.ylabel('Response (microvolts)')
