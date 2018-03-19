@@ -25,11 +25,11 @@ For more information on the scientific, market and user research that went into 
 
 ## Setup
 **1. Hardware**
-   - Open BCI Cyton Board
+   - [Open BCI Cyton Board](https://shop.openbci.com/products/cyton-biosensing-board-8-channel?variant=38958638542)
       - 4x AA batteries 
       - 2x Earlobe clips (Ground and mastoid reference) 
       - Wet/dry electrodes (+ conductive gel for wet electrodes)   
-      - (Optional: Ultracortex)   
+      - (Optional: [Ultracortex](https://shop.openbci.com/collections/frontpage/products/ultracortex-mark-iv))   
    - Soft measuring tape to locate 10-20 electrode positioning
 
 **2. Computer & Software**
