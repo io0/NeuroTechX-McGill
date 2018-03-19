@@ -1,7 +1,7 @@
 
 # chattERP
 
-incredibly outstanding one sentence intro. BAM.
+We take the ease with which we communicate with others in our daily lives for granted -- when communication becomes laborious, or impossible, this can have a severe negative impact on an individual's life.
 
 ChattERP is an assistive and augmentative communication (AAC) device for individuals with speech and motor disabilities, providing an interface for rapid verbal communication where this is otherwise impossible. ChattERP harnesses the power of the P300 event-related potential (ERP), a waveform reflecting decision-making, as measured by the low-cost OpenBCI, an open-source brain-computer interface platform. The identification of this neural marker of decision allows for communication that is solely based on neural activity. Electroencephalography (EEG) is used to detect the P300 induced by a speller matrix, ultimately allowing for identification of a single cell in the matrix. The identification of a single row occurs when the P300 signal is detected during the flash of the row of interest, and then again with the flash of the column of interest, thus isolating the cell containing the desired symbol. This project aims to integrate feedback from potential AAC end-users found in the literature. These individuals have highlighted specific issues with current EEG-based BCIs, such as speed, cost, difficulty of set-up, and non-user-friendly interfaces. In addition to these problems with current speller systems, users have also proposed exciting avenues to explore, such as interfacing neural spellers with other electronics. 
 
