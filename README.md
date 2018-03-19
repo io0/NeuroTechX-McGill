@@ -54,7 +54,7 @@ The plugin looks for training data in `data`. Files in `data` can be replaced at
 **B. Frontend procedure** <br>
 1. Download LTS version of [Node.js](https://nodejs.org/en/download/current/)
 2. Open terminal and migrate to the `NeuroTechX-McGill/frontend/` directory on your computer
-3. Run `npm install` in terminal -- this will install all necessary dependencies
+3. Run `npm install` in terminal -- this will install all necessary dependencies (NOTE: if you receive an error, run `rm -rf node_modules/` and then run `npm install`)
 4. Launch chattERP by running `node app` in terminal
 5. Open Google Chrome and go to [localhost:3000](http://localhost:3000)
 
