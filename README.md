@@ -2,7 +2,7 @@
 # chattERP
 
 
-<img src="http://gph.to/2GHu7r9" width="1000" height="500">
+<img src="https://media.giphy.com/media/ieeaUalwoI7t7dzHNj/giphy.gif" width="1000" height="500">
 
 We take the ease with which we communicate with others in our daily lives for granted -- when communication becomes laborious, or impossible, this can have a severe negative impact on an individual's life.
 
