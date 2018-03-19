@@ -13,6 +13,8 @@ const io      = require('socket.io')(server); // Sets up a socket
 const osc     = require('osc.io');
 const mail    = require('nodemailer');
 
+const dgram = require('dgram');
+const udp = dgram.createSocket('udp4');
 
 const transporter = mail.createTransport({
   service: 'gmail',
@@ -43,20 +45,29 @@ app.use(express.static(path.join(__dirname, 'public'))); //Put public files (JS,
 
 var connections = []
 
+
+
+
 io.on('connection', (socket) => {
 	console.log("new connection on socket");
 
-  // Front end will send a start message, and
-  // This will begin
-  let testMsg = ['h', 'e', 'y', '🍕'];
-// let testMsg = ['👋'];
-  let index = 0;
+  /* START UDP SERVER */
+  udp.on('error', (err) => {
+    console.log(`udp server error:\n${err.stack}`);
+    server.close();
+  });
 
-  setInterval(function() {
-    socket.emit('message', testMsg[index]);
-    index++;
-//}, 17700);
-  }, 2500);
+  udp.on('message', (msg, rinfo) => {
+    console.log(`udp server got message: ${msg.toString()} from ${rinfo.address}:${rinfo.port}`);
+    let location = msg.toString().split(',')[0];
+    socket.emit('message', location);
+  });
+
+  udp.on('listening', () => {
+    const address = server.address();
+    console.log(`udp server listening ${address.address}:${address.port}`);
+  });
+
 
   socket.on('sendmail', function(msg) {
 
