@@ -1,6 +1,9 @@
 
 # chattERP
 
+
+<img src="https://media.giphy.com/media/88hQnoIueQnHwjdgxH/giphy.gif" width="1000" height="500">
+
 We take the ease with which we communicate with others in our daily lives for granted -- when communication becomes laborious, or impossible, this can have a severe negative impact on an individual's life.
 
 ChattERP is an assistive and augmentative communication (AAC) device for individuals with speech and motor disabilities, providing an interface for rapid verbal communication where this is otherwise impossible. ChattERP harnesses the power of the P300 event-related potential (ERP), a waveform reflecting decision-making, as measured by the low-cost OpenBCI, an open-source brain-computer interface platform. The identification of this neural marker of decision allows for communication that is solely based on neural activity. Electroencephalography (EEG) is used to detect the P300 induced by a speller matrix, ultimately allowing for identification of a single cell in the matrix. The identification of a single row occurs when the P300 signal is detected during the flash of the row of interest, and then again with the flash of the column of interest, thus isolating the cell containing the desired symbol. This project aims to integrate feedback from potential AAC end-users found in the literature. These individuals have highlighted specific issues with current EEG-based BCIs, such as speed, cost, difficulty of set-up, and non-user-friendly interfaces. In addition to these problems with current speller systems, users have also proposed exciting avenues to explore, such as interfacing neural spellers with other electronics. 
@@ -88,7 +91,7 @@ Once three trials (showings of each row and column) have occurred, the block of 
 The server communication library included with the software emits OSC formatted data to a stream on the local server. A node package called OSC.io is used to re-interpret the OSC data as socket events titled “messages”. From that, socket.io is used to retrieve this data in real-time. The row and column number form the coordinates of the chosen letter or emoji. jQuery is used to animate the grid using a series of reciprocal callbacks to force synchronicity in Javascript by applying a class, then removing a class for the lit-up state. The letter or emoji is then inputted into the textbox and the letter is additionally fed into Awesomplete, a word prediction software. The software then searches its database of English words and displays the top 3 results that begin with that letter. The selection process is repeated for each letter to form complete words. Text-to-speech functions are possible using responsive voice API, which takes text input and provides speech output.
 
 
-<img src="https://media.giphy.com/media/1BhDpEtftozn6M0naw/giphy.gif" width="1000" height="500">
+<img src="https://media.giphy.com/media/1BhDpEtftozn6M0naw/giphy.gif" width="1000" height=500">
 
 ## Future Steps
 We would like to implement real-time data visualization in conjunction with the speller, so that the signal can be monitored more easily. As well, instead of recording training data beforehand, we would like to add an online calibration phase.
